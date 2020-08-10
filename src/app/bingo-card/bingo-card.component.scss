@@ -1,0 +1,75 @@
+#bingotable {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  border-collapse: collapse;
+  background: lightgrey;
+  border: 2px solid red;
+}
+
+th, td {
+  font-family: Helvetica;
+  margin: 0 auto;
+  text-align: center;
+  border: 3px solid black;
+  width: 20%;
+  color:red;
+  font-weight: bolder;
+  }
+
+.orange {
+  background: #9b59b6;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid #1976d2; //#eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: table-cell;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.card-disable {
+  border-radius: 4px;
+  border: 1px solid #1976d2;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: table-cell;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.selected {
+  background-color:green;
+  color:white;
+}
+
+#tblPrize {
+  width: 100%;
+}
+
+.mat-raised-button {
+  line-height:72px !important;
+  width: 100px;
+  background-color: #1976d2;
+}
+
+.spinner {
+  width: 30% !important;
+}

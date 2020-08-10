@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+<div fxLayout="column" fxFlexAlign="center" class="center">
+  <div fxFlex="100%">
+  <div *ngIf="$bingoRunning?.spinner_status === 'S'">
+    <img src="../../assets/images/number_draw.gif" width="200px" height="200px"  />
+
+    <mat-card *ngIf="$bingoRunning?.spinner_status === 'w'">
+      <mat-card-content>
+        Game starting shorthly
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="selected" width="200px" height="200px" *ngIf="$bingoRunning?.spinner_status === 'D'">
+    {{ $bingoRunning.current_number }}
+  </div>
+</div>
+</div>
+

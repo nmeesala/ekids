@@ -1,2 +1,26 @@
-<p>Welcome {{ name }}</p>
-
+<div fxLayout="row" fxLayoutAlign="" *ngIf="!$data">
+  <button mat-raised-button color="primary" (click)="generateCard()">Bingo</button>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<div fxFlex="80">
+      <table>
+        <tr *ngFor="let row of rows;let i=index">
+          <td
+                matRipple
+                [matRippleDisabled]="col.number == 0 || col.selected"
+                [matRippleColor]="_rippleColor"
+                *ngFor="let col of $data?.sequence | filterRow:i"
+                [class]="col.number == 0 ? 'card-disable': col.selected == true ? 'card selected': 'card'"
+                (click)="selected(col)">
+                {{ col.number == 0 ? 'X' : col.number }}
+            </td>
+        </tr>
+      </table>
+</div>
+</div>
+<div class="spinner" fxLayout="row" fxLayoutAlign="">
+  <div fxFlex="30%" *ngIf="_showSpinner">
+    <app-number-spin></app-number-spin>
+   </div>
+   <div fxFlex="70%"></div>
+</div>

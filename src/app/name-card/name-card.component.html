@@ -1,5 +1,27 @@
-Please enter your name : <input [(ngModel)]="name" />
-<button (click)="addName()">Add My Name</button>
+<form [formGroup]="_form">
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Please enter your name : </mat-label>
+    <input matInput [(ngModel)]="name" formControlName="name" required />
+  </mat-form-field>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="addName()">Join</button>
+</div>
+</form>
 
-{{ name  }}
+
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Zipcode</th>
+  </thead>
+  <tr *ngFor="let wow of students">
+    <td>{{ wow.name }}</td>
+    <td>{{ wow.age }}</td>
+    <td>{{ wow.zipcode }}</td>
+  </tr>
+</table>
 
